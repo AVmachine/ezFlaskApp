@@ -1,2 +1,8 @@
 # Project exclude paths
 /venv/
+.idea/ezFlaskApp.iml
+__pycache__/app.cpython-37.pyc
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/inspectionProfiles/profiles_settings.xml
