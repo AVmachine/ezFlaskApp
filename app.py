@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def hello_world():
-    dataframe = df.return_dataframe()
+    dataframe = df.test_df()
+
     return render_template('index.html', dataframe=dataframe)
 
 
