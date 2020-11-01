@@ -1,14 +1,6 @@
 
 
 def return_dataframe ():
-    #Dependencies, in case they are not already installed in the environment
-    !pip install kaggle --upgrade -q
-    !pip install numpy --upgrade -q
-    !pip install opendatasets --upgrade -q
-    !pip install pandas --upgrade -q
-    !pip install seaborn --upgrade -q
-    !pip install matplotlib --upgrade -q
-
 
     import os
     import kaggle
@@ -22,7 +14,7 @@ def return_dataframe ():
     import matplotlib
     import matplotlib.pyplot as plt
 
-    %matplotlib inline
+    #%matplotlib inline
 
 
     kaggle.api.authenticate()
@@ -70,4 +62,4 @@ def return_dataframe ():
     final_df = final_df.groupby('cast').agg({'title':'max', 'type':'max', 'director':'max', 'country':'max', 'date_added':'max', 'description':'max', 'averageRating':'mean', 'numVotes':'sum'}).reset_index()
 
 
-    return df1.iloc[1:101]
+    return final_df.iloc[1:101]
