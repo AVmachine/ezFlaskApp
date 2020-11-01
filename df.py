@@ -3,7 +3,6 @@
 def return_dataframe ():
 
     import os
-    import kaggle
     from io import StringIO # For creation of string inputs to be read as '.tsv' by pandas
     import re # For separation of netflix_df.country strings into lists
     import gzip # For extraction of IMDB datasets
@@ -17,12 +16,8 @@ def return_dataframe ():
     #%matplotlib inline
 
 
-    kaggle.api.authenticate()
-    kaggle.api.dataset_download_files('shivamb/netflix-shows', path=os.getcwd(), unzip=True)
-
     netflix_df_raw = pd.read_csv('netflix_titles.csv')
     netflix_df = netflix_df_raw.copy()
-    netflix_df
 
     #Download IMDB files from official repository
     urllib.request.urlretrieve('https://datasets.imdbws.com/title.ratings.tsv.gz', 'title.ratings.tsv.gz');

@@ -7,3 +7,5 @@ __pycache__/app.cpython-37.pyc
 .idea/misc.xml
 .idea/inspectionProfiles/profiles_settings.xml
 __pycache__/df.cpython-37.pyc
+title.basics.tsv.gz
+title.ratings.tsv.gz
