@@ -1,13 +1,13 @@
 from flask import Flask, render_template
-import return_dataframe
+import df
 
 app = Flask(__name__)
 
 
 @app.route('/', methods=['GET'])
 def hello_world():
-    list = [0, 1, 2, 3]
-    return render_template('index.html', list=list)
+    dataframe = df.return_dataframe()
+    return render_template('index.html', dataframe=dataframe)
 
 
 
