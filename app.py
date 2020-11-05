@@ -1,8 +1,9 @@
 from flask import Flask, render_template, Response
-import df, io
+import df
+import io
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
-import pylab
+
 
 app = Flask(__name__)
 
