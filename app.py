@@ -10,7 +10,5 @@ def hello_world():
     return render_template('index.html', dataframe=dataframe)
 
 
-
-
 if __name__ == '__main__':
     app.run()
