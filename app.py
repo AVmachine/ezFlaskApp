@@ -19,6 +19,9 @@ def plot_png():
     FigureCanvas(fig).print_png(output)
     return Response(output.getvalue(), mimetype='image/png')
 
+@app.route('/page1')
+def hello_world():
+    return 'Hello'
 
 def create_figure():
     dataframe = df.test_df()
